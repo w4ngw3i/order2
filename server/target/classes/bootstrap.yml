@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: test
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#application.yml更改为bootstrap.yml是为了优先加载配置文件，从而避免启动因加载不到相关配置文件而报错
+#改变负载均衡规则
+#PRODUCT:
+#   ribbon:
+#     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
