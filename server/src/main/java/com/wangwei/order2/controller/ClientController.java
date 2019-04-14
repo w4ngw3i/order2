@@ -1,6 +1,10 @@
 package com.wangwei.order2.controller;
 
-import com.wangwei.client.ProductClient;
+
+
+
+
+import com.wangwei.product.client.ProductClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -17,8 +21,8 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 public class ClientController {
 
-    @Autowired
-    private LoadBalancerClient loadBalancerClient;
+//    @Autowired
+//    private LoadBalancerClient loadBalancerClient;
 
     @Autowired
     private ProductClient productClient;

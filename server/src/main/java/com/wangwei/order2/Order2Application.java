@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = "com.wangwei.product.client")
+@EnableFeignClients(basePackages = "com.wangwei")
 public class Order2Application {
 
 	public static void main(String[] args) {
