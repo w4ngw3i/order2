@@ -7,11 +7,17 @@ spring:
         enabled: true
         service-id: CONFIG
       profile: test
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
 
 
 #application.yml更改为bootstrap.yml是为了优先加载配置文件，从而避免启动因加载不到相关配置文件而报错
@@ -20,4 +26,7 @@ eureka:
 #   ribbon:
 server:
   port: 8099
+logging:
+  level:
+    org.springframework.cloud.netflix.fegin: debug
 #     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
